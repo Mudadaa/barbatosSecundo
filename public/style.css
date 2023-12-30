@@ -1,0 +1,565 @@
+
+:root{
+    --clr-1:#b23a3a;
+    --clr-2:#60df2e;
+    --clr-3:#e91010;
+    --clr-6: #00ffff13;
+    --clr-7: #72ffd6;
+    --clr-8: #48f779;
+    --clr-9:#0C7175;
+}
+@font-face {
+    font-family:'Roboto';
+    src: url('./fonts/roboto/Roboto-Regular.ttf');
+}
+@font-face{
+    font-family:'Neon';
+    src: url('./fonts/neon/NEON CLUB MUSIC_medium.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+scroll-behavior: smooth;
+margin: 0;
+padding: 0;
+height: 100vh;
+width: 100vw;
+overflow-y: hidden;
+overflow-x: hidden;
+}
+/* ---------------------BODY------------------------ */
+body{
+    min-height: 100vh;
+    min-width: 100vw ;
+    background-image:url(img/cockpit.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/* -----------------------VIDEO PRELOAD---------------------------------------------------------- */
+#preloader{
+    z-index: 100;
+    height: 100vh;
+    width:  100vw;
+    object-fit: fill;
+    
+}
+
+/* ---------------------CONTAINER------------------------ */
+
+.container {
+    min-height: 100vh;
+    min-width: 100vw ;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 32% 43% 25%;
+    grid-template-areas: "hautG hautM hautD"
+"ecranG milieu ecranD"
+"basG basM basD";
+}
+.containerVideos{
+height:100vh;
+width: 100vw ;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+justify-content: space-around;
+perspective: 1000px;
+}
+h2{
+    display: block;
+    background: url(img/card.png);
+    background: var(--clr-7);
+    background: radial-gradient(circle, var(--clr-7) 0%, var(--clr-8)); 
+    border-radius: 5px;
+    padding: 6px;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 15%;
+    margin-left: -50%;
+    font-family: 'Neon';
+    font-weight: lighter;
+    opacity: 0.9;
+    color:var(--clr-3);
+    box-shadow: 5px 2px 2px  rgba(0, 0, 0, 0.377) ;
+}
+/* h2:hover{
+
+} */
+ #perf video{
+    height: 500px;
+    width: 500px;
+}
+#perf video:hover{
+    transition: ease-in 400ms;
+}
+
+#body, #massue,#lupus{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+.quitVideo{
+    margin: 50px 15px;
+    margin-left: 50px;
+    width: 90px;
+    height: 90px;
+}
+/* -----------------------------PARTIE GAUCHE----------------------------------------------- */
+.laterale-gauche{
+    grid-area: hautG/ecranG/basG;
+    perspective: 1000px;
+    height: 100%;
+    width: 100%;
+}
+
+.hautG{
+    height: 32vh;
+    grid-area: hautG;
+   
+}
+.basG{
+    height: 25vh;
+    grid-area: basG;
+}
+/* ----------------------------écranGauche----------------------------------------------- */
+
+.ecran-gauche{
+    grid-area: ecranG;
+    width: 50%;
+    height: 0.5vh;
+    background-image: url("img/sotoNoB.jpg");
+    opacity: 0.8;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* transform: matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1);
+    a, b, c, d définissent la rotation et l'échelle.
+    tx et ty définissent les translations sur les axes X et Y. */
+    transform: matrix3d(-2,-0.05, 1.8, 0, -.01, 1.1, 0, 0, 0, 0, 1, 0, 140, 30, 0, 1);
+    background-color: rgba(0, 255, 255, 0.076); 
+    border:1px solid #0C7175 ;
+    border-radius: 4px;
+    transition: all  400ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.ecran-gauche:hover{
+cursor: pointer;
+opacity: 1;
+z-index:90;
+transform: matrix3d(-2,-0.05, 1.2, 0, -.01, 1, 0, 0, 0, 0, 1, 0, 120, 30, 0, 1);
+border:1px solid rgba(65, 35, 35, 0.874);
+
+}
+.skills {
+    width: 80%;
+    height: 100%;
+    object-fit: fill; 
+    border:1px solid var(--clr-7);
+    border-radius: 4px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+/*----------------------------PARTIE DROITE----------------------------------------------- */
+.laterale-droite{
+    grid-area: hautD/ecranD/basD;
+    perspective: 1000px;
+    height: 100%;
+    width: 100%;
+}
+.hautD{
+    grid-area: hautD;
+    height: 32vh;
+}
+.basD{
+    grid-area: basD;
+    height: 25vh;
+}
+/*----------------------------écranDroite----------------------------------------------- */
+.ecran-droit{
+    height: 0.5vh;
+    grid-area: ecranD;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* transform: matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1);
+    a, b, c, d définissent la rotation et l'échelle.
+    tx et ty définissent les translations sur les axes X et Y. */
+    transform: matrix3d(1, 0.05, 1.8, 0, -.005, 1, 0, 0, 0, 0, 1, 0, -80, 30, 0, 1);
+    background-color: var(--clr-6);
+    border:1px solid var(--clr-9) ;
+    border-radius: 4px;
+   transition: all  500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+   color: azure;
+}
+.ecran-droit:hover{
+    transform: matrix3d(0.95, -0.001, 0.9, 0, -.01, 1, 0, 0, 0, 0, 1, 0, -50, 30, 0, 1);
+    opacity: 1;
+    z-index: 1000;
+}
+.notice{
+    cursor: pointer;
+    width: 100%;
+   padding: 10% 15%;
+   margin: 20% 70%;
+    font-family: 'Neon';
+    background-color:#0c727598;
+    border:1px solid var(--clr-9) ;
+    height: 3px;
+    transition: 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation: alerte 7s ease-in-out infinite alternate;
+}
+@keyframes alerte {
+    /* animation d'entrée de communication de Mika pour le pilote */
+    50%{
+        background-color: var(--clr-1);
+        opacity: 0.6;
+        background-position: left;
+    }
+
+    70%{
+        background-color: var(--clr-3);
+        opacity: 0.8;
+        background-position: right;
+    }
+}
+.mikazuki{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+    z-index: 10;
+}
+.mikazuki img{
+    opacity: 0.8;
+    z-index: 10;
+}
+.mikaOne {
+    max-height: fit-content;
+    height: 60%;
+    width: 125px;
+   align-items: flex-end;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 400ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  position: absolute;
+  margin-right: 10px;
+}
+.mikaTwo{
+    max-height: fit-content;
+    align-items: flex-end;
+  cursor: pointer;
+    height: 70%;
+    width: 150px;
+    position: absolute;
+
+}
+.speech{
+    font-family: 'Neon';
+    background-color: var(--clr-6);
+    border:1px solid var(--clr-9) ;
+    padding: 22px;
+    margin: 40px 60px 40px;
+    width: 100%;
+    height: 160px;
+    cursor: pointer;
+    z-index: 150;
+}
+
+.mika-speech{
+    word-break: keep-all;
+    height: fit-content;
+    transition: 400ms cubic-bezier(0.39, 0.575, 0.565, 1);
+    z-index: 150;
+}
+
+/*----------------------------MILIEU----------------------------------------------- */
+.centre{
+    grid-area: hautM/milieu/basM;
+  padding-right: 10px;
+  padding-left: 5px;
+    height: 100%;
+    width: 100%;
+    
+}
+.haut-milieu{
+    grid-area: hautM;
+    height: 32vh;
+}
+.ecran-milieu{
+    grid-area: milieu;
+    height: 43vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 40px;
+}
+.normalBarbatos{
+    cursor: pointer;
+    z-index: 50;
+    height: fit-content;
+    margin-bottom: 20px;
+}
+.tradText{
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: fit-content;
+padding: 15px;
+padding-bottom: 30px;
+color: azure;
+text-align:left;
+font-family: 'Roboto';
+border-radius: 4px 5px;
+}
+.japanese{
+    word-break:keep-all;
+}
+.closingButton{
+width: fit-content;
+margin-bottom: 70px;
+font-family: 'Neon';
+font-size: 20px;
+color: #242B33;
+background: radial-gradient(circle, var(--clr-7)0%, var(--clr-8) 100%);
+border-radius: 5px;
+cursor: pointer;
+}
+.closingButton:hover{
+    background: radial-gradient(circle, var(--clr-7) 0%, whitesmoke 100%);
+    color: var(--clr-3);
+    transition: 400ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#faceB,#dosB,
+#scanBface,#scanBdos{
+    width:150px ;
+    height:10px ;
+    background-image: url('/img/card.png');
+    background-color: var(--clr-6);
+    border:1px solid var(--clr-9);
+    border-radius: 4px;
+   transition: all  400ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#scanBface,#scanBdos{
+    transform: scaleX(-1);
+}
+#faceB:hover, #dosB:hover{
+    scale: 1.6;
+    margin-left: 70px;
+    transition: 400ms ;
+}
+#scanBface:hover,#scanBdos:hover{
+    scale: 1.6;
+    transition: 400ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.rayBarbatos{
+cursor: pointer;
+z-index: 50;
+}
+.rayBarbatos:hover{
+margin-right: 60px;
+transition: 400ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.buttons{
+    display: flex;
+   
+}
+.intelButton{
+    width: 100px;
+    padding: 5px;
+}
+.johoButton{
+    width: 100px;
+    padding: 5px;
+}
+.flag{
+    height:50px;
+    width: 50px;
+    opacity: 1;
+}
+.basMilieu{
+    grid-area: basM;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+  
+}
+.outils{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 60px;
+}
+button{
+    background: var(--clr-7);
+    background: radial-gradient(circle, var(--clr-7) 0%, var(--clr-8) 100%);
+    border:1px solid var(--clr-2);
+    cursor: pointer;
+    font-family:'Neon';
+    margin-bottom: 4px;
+    opacity: 0.5;
+    color:#242B33 ;
+    box-shadow: 5px 2px 2px  rgba(0, 0, 0, 0.377) ;
+}
+button:hover{
+    scale: 1.3;
+    border-radius: 6px;
+    background: radial-gradient(circle, var(--clr-7) 0%, var(--clr-8)100%);
+    transition: 300ms ease-in-out;
+    color: var(--clr-3);
+    opacity: 1;
+    border: none;
+    z-index: 10;
+}
+.outils button{
+    padding: 8px;
+    width: fit-content;
+    margin-bottom: 40%;
+    margin-right: 2%;
+   
+}
+/* ------------------------MEDIA QUERIES------------------------
+https://talks.freelancerepublik.com/responsive-web-design-media-queries-css/ */
+
+
+/* smartphone*/
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+    .container{
+        grid-template-rows: 15% 55% 35%;
+    }
+    .containerVideos{
+        height:100vh;
+        width: 100vw ;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        
+        }
+        
+    .quitVideo{
+    margin: 50px 15px;
+    margin-left: 50px;
+    width: 60px;
+    height: 60px;
+    }
+    .ecran-milieu{
+        padding-top: 20px;
+        display: grid;
+    grid-template-columns: 1fr 2fr;
+    }
+    .ecran-gauche{
+        /* transform: matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1);
+                a, b, c, d définissent la rotation et l'échelle.
+                tx et ty définissent les translations sur les axes X et Y. */
+                transform: matrix3d(-1.9, 0.5, 2, 0, .02, 1, 0, 0, 0, 0, 1, 0, 90, 10, 0, 1);
+                
+            }
+            
+            /*----------------------------écranDroite----------------------------------------------- */
+        .ecran-droit{
+            /* transform: matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1);
+            a, b, c, d définissent la rotation et l'échelle.
+            tx et ty définissent les translations sur les axes X et Y. */
+            transform: matrix3d(0.95, 0.5, 2, 0, -0.02, 1, 0, 0, 0, 0, 1, 0, -40, 10, 0, 1);
+            
+        }
+        .rayBarbatos{
+            display: none;
+        }
+        .normalBarbatos{
+            height: fit-content;
+        }
+        #faceB,#dosB{
+            width:100px ;
+            height: 100px;
+       }
+      .tradText{
+        font-size: smaller;
+        width: fit-content;
+        height: fit-content;
+      }
+     .buttons{
+        display: block;
+     }
+     .intelButton{
+        width: 30px;
+     }
+     .johoButton{
+        width: 30px;
+     }
+     .flag{
+        height:20px;
+        width: 20px;
+        opacity: 1;
+    }
+    }
+/* tablette */
+ @media only screen and (min-width:780px) and (max-width: 990px) and (orientation: landscape){
+   
+    .rayBarbatos{
+        display: none;
+    }
+    .ecran-milieu{
+        padding-top: 20px;
+        display: grid;
+    grid-template-columns: 1fr 2fr;
+    }
+ } 
+
+/*desktop 1920-1200px*/
+@media only screen and (min-width:1920px)  and (max-width: 2000px){
+ 
+    .ecran-gauche{
+/* transform: matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1);
+        a, b, c, d définissent la rotation et l'échelle.
+        tx et ty définissent les translations sur les axes X et Y. */
+        transform: matrix3d(-1.9, 0.9, 2, 0, .02, 1.1, 0, 0, 0, 0, 1, 0, 200, 10, 0, 1);
+    }
+    .ecran-gauche:hover{
+        transform: matrix3d(-1.9, 0.6, 1.5, 0, .02, 1, 0, 0, 0, 0, 1, 0, 200, 10, 0, 1);
+        }
+    /*----------------------------écranDroite----------------------------------------------- */
+.ecran-droit{
+    /* transform: matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1);
+    a, b, c, d définissent la rotation et l'échelle.
+    tx et ty définissent les translations sur les axes X et Y. */
+    transform: matrix3d(1.3, 0.9, 2, 0, -0.02, 1, 0, 0, 0, 0, 1, 0, -40, 10, 0, 1);
+    
+}
+
+.centre{
+    margin-left: 10px;
+} 
+}
+@media only screen and (min-width: 2560px) and (min-height:1440px){
+ 
+    .ecran-gauche{
+        /* transform: matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1);
+         a, b, c, d définissent la rotation et l'échelle.
+         tx et ty définissent les translations sur les axes X et Y. */
+         transform: matrix3d(-1.9, 0.01 ,1.2, 0, .02, 1, 0, 0, 0, 0, 1, 0, 250, 10, 0, 1);
+         width: 50%;
+     }
+     .ecran-gauche:hover{
+        transform: matrix3d(-1.5, 0.04 ,1.5, 0, .02, 1, 0, 0, 0, 0, 1, 0, 280, 10, 0, 1);
+     }
+     /*----------------------------écranDroite----------------------------------------------- */
+ .ecran-droit{
+     /* transform: matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1);
+     a, b, c, d définissent la rotation et l'échelle.
+     tx et ty définissent les translations sur les axes X et Y. */
+     transform: matrix3d(0.95, 0.04, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, -120, 10, 0, 1);
+     
+ }
+
+ .centre{
+     margin-left: 10px;
+ } 
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styleTwo.css" />
+  <link rel="shortcut icon" id="favicon" href="/img/Tekkadan_logo.webp" type="image/x-icon">
+  <title>Les Outils</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li class="retour"><a href="/"><img src="img/Tekkadan_Logo.webp" id="tekkadan" alt=""></a></li>
+        <li><button id="scrollToTopButton"><img src="img/arrowR.png" id="arrow" alt=""></button></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Mobile Suit Gundam:Iron-Blooded Orphans</h1>
+    <div class="cockpit">
+      <h2>Cockpit</h2>
+      <p>Qu'est-ce qu'y fait l'engouement des séries et des animés méca ?</p>
+      <p>C'est le pilotage de la machine !</p>
+      <p>L' idée m'ait donc venue de prendre en background une image de cockpit</p>
+      <p>alors que je recherchais du contenue vidéo potentiellement intéresssant.</p>
+      <p>Je voulais donner une légère impression pour le visiteur d'être lui même le pilote dans ce cockpit.</p> En immersion !
+    </div>
+    <div class="video">
+      <h2>Images, Vidéos et Sons</h2>
+      <ul>
+        <li>
+          <p><img class="pro" id="adobe" src="img/premiereProLogo.png" alt=""></p> Adobe Premiere Pro: Scènes et extrait
+        </li>
+        <p>La sélection des scènes et la découpe des extraits vidéos des épisodes ont été réalisées avec Adobe Premiere Pro.</p>
+        <p> Dans ce cas précis j'ai d'abord réalisé le montage total des vidéos avec ce logiciel.</p>
+        <p>Je parle ici de la découpe et du placement des extraits qui m'intéressait.</p>
+        <p>Et une fois ça fait, j'envoyais le tout vers After Effects pour le rajout d'effets</p>
+        <p><img class="preload" src="img/premiereMontageVideo.png" alt=""></p>
+        <p>J'ai pu réaliser la vidéo de préchargement du site ou vidéo preload et les vidéos de skills du Gundam Barbatos </p>
+        <li>
+          <p><img class="photo" id="adobe" src="img/photoshopLogo.png" alt=""></p>Photoshop
+        </li>
+        <p>Photoshop m'a servi pour la réalisation de la transparence de nombreuses images.
+        <p><img class="transparence" src="img/transparence.png" alt=""></p>
+        </p>
+        <p> Et pour la création des masques d'écrètage.</p>
+        <p><img class="ecretOne" src="img/ecretage2.png" alt=""></p>
+        <p> Pour donner cet effet de rayons X sur le Mobile suit (la machine),
+          il vous faut 2 calques.</p>
+        <p> Le calque du robot et le calque des rayons. Mettez le calque des rayons au dessus du calque du robot.</p>
+        <p> Puis, après avoir disposé et agencé le calque rayon par-dessus le robot, clickez sur Calques en haut à gauche</p>
+        <p><img class="ecretTwo" src="img/ecretage.jpg" alt=""></p>
+        <li>
+          <p><img class="effects" id="adobe" src="img/afterEffectsLogo.png" alt=""></p> After Effects: transparence sur vidéo et vidéo preload
+        </li>
+        <p>After Effects m'a servi pour le retrait de l'arrière plan dans certaines vidéos, il a une panoplie d'outils dont le Rotor Brush qui vous permet d'ajouter ou de retirer de votre calque des éléments.</p>
+        <p><img class="rotor" src="img/rotorPinceauu.png" alt=""></p>
+        <p>Et c'est comme ça que l'on réalise de la transparence sur une vidéo au cours d'un montage ! </p>
+        <p>Par ailleurs sur la vidéo de preload, After Effects m'a permis d'ajouter le texte et de créer un effet de "typing" pour simuler le lancement du Gundam Barbatos.
+        </p>
+        <li>
+          <p><img class="encoder" id="adobe" src="img/mediaEncoderLogo.png" alt=""></p>Media Encoder: 2 consersions .MOV & .WEBM
+        </li>
+        <p>Pour la conservation de la transparence des vidéos après retouche du rotor brush, il m'a fallu d'abord convertir la vidéo de travail en .MOV via Quictime.</p>
+        <p>Quictime conserve les canaux alpha donc la transparence.</p>
+        <p>Sauf que les navigateurs comme Mozilla et Chrome ne supportent pas le fichier .mov .</p>
+        <p>Donc il fallait enchainer par une conversion en .webm .
+          <img class="conv" src="img/conversionWEBM.png" alt="">
+        </p>
+
+      </ul>
+    </div>
+  </main>
+  <footer></footer>
+
+  <script>
+    // Obtenez une référence vers le bouton
+    var scrollToTopButton = document.getElementById("scrollToTopButton");
+
+    // Ajoutez un écouteur d'événements pour détecter le clic sur le bouton
+    scrollToTopButton.addEventListener("click", function() {
+      // Utilisez window.scrollTo() pour faire remonter la page au sommet
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      }); // "smooth" pour un défilement en douceur
+    });
+  </script>
+</body>
+
+</html>

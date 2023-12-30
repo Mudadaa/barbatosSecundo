@@ -1,0 +1,288 @@
+@font-face {
+    font-family:'Roboto';
+    src: url('./fonts/roboto/Roboto-Regular.ttf');
+}
+
+
+:root{
+    --clr-1:#b23a3a;
+    --clr-3:#e91010;
+    --clr-7: #72ffd6;
+    --clr-8: #48f77a8e;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: fit-content;
+    border-radius: 4px 6px;
+    line-height: 1.5;
+    color: #d5e6ea;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        background: url(img/space.jpg);
+        background-size: cover;
+        font-family: 'Roboto';
+        padding-left: 15px;
+        margin: 5px 10px;
+        margin-top: 60px;
+        padding-right: 30px;
+    }
+    nav{
+        position: fixed;
+        right: 100px;
+        z-index: 20;
+    }
+    button{
+        border: none;
+        font-family: 'Roboto';
+        font-size: larger;
+        font-weight: bold;
+        color: var(--clr-1);
+    }
+    #scrollToTopButton{
+        background-color:  var(--clr-8);
+        width: fit-content;
+        margin:15px 10px;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        right: 100px;
+        position: fixed;
+        margin-top: 50px;
+        z-index: 20;
+        color: var(--clr-1);
+    }
+    #arrow,#tekkadan{
+        height:50px ;
+        width: 50px;
+    }
+    .retour{
+        background-color:  var(--clr-8);
+        width: fit-content;
+        margin:15px 10px;
+        padding: 10px;
+        font-size: 20px;
+       
+    } 
+     .retour a{
+        text-decoration: none;
+    }
+    .retour:hover, #scrollToTopButton:hover{
+        background-color: whitesmoke;
+        scale: 1.1;
+        cursor:pointer;
+        transition: all  400ms cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+    .retour a:hover{
+color: var(--clr-3);
+    }
+    
+    li{
+        list-style: none;
+        font-size: larger;
+        font-weight: bold;
+        color: var(--clr-1);
+    }
+    .cockpit{
+        margin: 15px;
+        padding: 15px 60px;
+        background-color: #242b337e;
+        backdrop-filter: blur(2px);
+    }
+    h2{
+        margin-bottom: 20px;
+    }
+
+/* ////////////////////////////////////////////////////////// */
+
+.video{
+    background-color: #242b337e;
+    margin: 15px;
+    padding: 15px 60px;
+    backdrop-filter: blur(5px);
+}
+li ,p{
+    margin-bottom: 20px;
+}
+#adobe{
+    border: solid 10px #A4B6BA;
+    background-color: #A4B6BA;
+}
+.pro{
+    height:200px ;
+    width: 200px ;
+}
+.effects{
+    height:200px  ;
+    width:200px  ;
+}
+.encoder{
+    height: 200px ;
+    width: 200px ;
+}
+.photo{
+    height:200px  ;
+    width:200px  ;
+}
+.preload{
+    height:600px  ;
+    width:1000px  ;
+}
+.transparence{
+    height:400px  ;
+    width:600px  ;
+}
+.ecretOne{
+    height:400px  ;
+    width:600px  ;
+}
+.ecretTwo{
+    height:600px  ;
+    width:600px  ;
+}
+.rotor{
+    height:600px  ;
+    width:1000px  ;
+}
+
+@media screen and (max-width: 767px) {
+    /* Styles spécifiques aux téléphones */
+    /* nb rappel sur max-width/height =>les images s'ajusteront automatiquement en conservant leur proportion
+    (rapport hauteur/largeur) à la réduction de la largeur de leur conteneur
+    parent, mais aussi à la réduction de la hauteur si nécessaire. */
+    img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      nav, #scrollToTopButton{
+        right: 30px;
+      }
+    main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    }
+    .cockpit {
+      /* Styles spécifiques aux téléphones pour .cockpit */
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+    }
+    .video {
+      /* Styles spécifiques aux téléphones pour .video */
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+    }
+    #arrow,#tekkadan{
+        width:35px ;
+        height: 35px ;
+    }
+    .pro{
+        height:100px  ;
+        width:100px  ;
+    }
+    .effects{
+        height:100px  ;
+        width:100px  ;
+    }
+    .encoder{
+        height:100px  ;
+        width:100px  ;
+    }
+    .photo{
+        height:100px  ;
+        width:100px  ;
+    }
+    .preload{
+        height:300px  ;
+        width:500px  ;
+    }
+    .transparence{
+        height:200px  ;
+        width:300px  ;
+    }
+    .ecretOne{
+        height:200px  ;
+        width:300px  ;
+    }
+    .ecretTwo{
+        height:300px  ;
+        width:300px  ;
+    }
+    .rotor{
+        height:300px  ;
+        width:500px  ;
+    }
+}
+  
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Styles spécifiques aux tablettes */
+    img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+    main {
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
+    width: 100%;
+      }
+      .cockpit {
+        display: flex;
+        flex-direction: column;
+       width: 100%;
+    justify-content: center;
+      }
+      .video {
+        display: flex;
+        flex-direction: column;
+       width: 100%;
+    justify-content: center;
+      }
+  
+  @media screen and (min-width: 1024px) {
+    /* Styles spécifiques aux ordinateurs de bureau */
+    img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+    main {
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
+    width: 100%;
+      }
+      .cockpit {
+        
+        display: flex;
+        flex-direction: column;
+       width: 100%;
+    justify-content: center;
+      }
+      .video {
+        
+        display: flex;
+        flex-direction: column;
+       width: 100%;
+    justify-content: center;
+      }
+  }
+}
+  
