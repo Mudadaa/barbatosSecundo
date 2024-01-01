@@ -3,14 +3,21 @@ const app={
     //contiendra les nouvelles fonctions de dynamisation de la page web
     
     init :function (){
+
+      // // LE PRELOAD///
+      app.preloader=document.getElementById('preloader');
+    
+      app.timeOut();
+
+
       ///////////////LA GAUCHE ////////////////////////////
       app.gauche=document.querySelector('.laterale-gauche');
       app.screenL=document.querySelector('.ecran-gauche');
 
 
       ///////////////LA DROITE ////////////////////////////
-      app.droite=document.querySelector('.laterale-droite');
-      app.screenR=document.querySelector('.ecran-droit');
+    app.droite=document.querySelector('.laterale-droite');
+    app.screenR=document.querySelector('.ecran-droit');
        //rightScreen Communication with MikaZuki
     app.notice=document.querySelector('.notice');
     app.speech=document.querySelector('.speech');
@@ -89,6 +96,21 @@ const app={
       app.resizingTimeOut();
       app.skills.play();
     },
+//fonction qui permet de faire apparaitre le preload et disparaitre
+ timeOut: function () {
+  // LE PRELOAD///
+  app.preloader = document.getElementById('preloader');
+
+  // ... (autres initialisations)
+
+  // faire disparaitre le preloader et faire apparaitre le site
+  function hidePreloader() {
+    app.preloader.style.display = "none";
+  }
+
+  setTimeout(hidePreloader, 6100);
+},
+
     //interchangement d'image entre le devant et l'arrière du gundam
     toggle : function(){
       console.log('ça toggle ouuuuu ?');
@@ -309,5 +331,6 @@ closingText: function(){
       setTimeout(app.resizingLoadTwo,8400);
       setTimeout(app.resizingLoadThree,9000);
     },
+  
 };
   document.addEventListener('DOMContentLoaded', app.init);

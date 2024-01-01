@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/public/style.css" />
+  <link rel="shortcut icon" id="favicon" href="/public/img/Tekkadan_logo.webp" type="image/x-icon">
+  <!-- meta name="description" content="Mobile Suit Gundam Barbatos, ガンダム・バルバトス, is a mobile suit that appears in the Mobile Suit Gundam IRON-BLOODED ORPHANS television series and the side story Gundam IRON-BLOODED ORPHANS Gekko, which is featured in the short story collection Gundam IRON-BLOODED ORPHANS Urdr-Hunt. It is piloted by Mikazuki Augus."> -->
+
+  <title>Mobile Suit|Barbatos| ガンダム・バルバトス</title>
+</head>
+
+<body>
+  <video autoplay id="preloader" noloop>
+    <source src="/public/videos/preload.webm" type="video/webm">
+  </video>
+
+  <div class="container">
+    <div class="containerVideos" hidden>
+      <div id="perfOne">
+        <video id="premiere" class="skills">
+          <source src="/public/videos/vueDessous.webm" type="video/webm">
+        </video>
+        <img id="body" src="/public/img/body.jpg" hidden alt="">
+      </div>
+      <div id="perfTwo">
+        <video id="deuxieme" class="skills">
+          <source src="/public/videos/massue.webm" type="video/webm">
+        </video>
+        <img id="massue" src="/public/img/massue.jpg" hidden alt="">
+      </div>
+
+      <div id="perfThree">
+        <video id="troisieme" class="skills">
+          <source src="/public/videos/shippo.webm" type="video/webm">
+        </video>
+        <img id="lupus" src="/public/img/lupus.jpg" hidden alt="">
+      </div>
+    </div>
+    <button class="quitVideo">Return</button>
+    <h2>Barbatos's skills</h2>
+    <!-- --------------------------LATERAL GAUCHE------------------------------------ -->
+    <div class="laterale-gauche">
+      <div class="hautG"></div>
+      <div class="ecran-gauche">
+      </div>
+      <div class="basG"></div>
+    </div>
+    <!-- ---------------------------MILIEU------------------------------------- -->
+    <div class="centre">
+      <div class="haut-milieu"></div>
+      <div class="ecran-milieu">
+
+        <div class="normalBarbatos">
+          <img id="faceB" src="/public/img/face.png" alt="">
+          <img id="dosB" src="/public/img/dos.png" hidden alt="">
+        </div>
+        <div class="tradText">
+          <div class="closingButton" hidden>X</div>
+          <span class="english" hidden> The Gundam Barbatos is a mobile suit appearing in the series Mobile Suit Gundam:Iron-Blooded Orphans. It is piloted by Mikazuki Augus.</span>
+          <span class="japanese" hidden>ガンダム・バルバトスは、シリーズ「機動戦士ガンダム」に登場するモビルスーツです。「鉄血のオルフェンズ」というシリーズで登場するモビルスーツで、パイロットはミカヅキ・オーガスです。</span>
+        </div>
+        <div class="rayBarbatos">
+          <img id="scanBface" src="/public/img/faceScanner.png" alt="">
+          <img id="scanBdos" hidden src="/public/img/dosScanner.png" alt="">
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="intelButton"> <img class="flag" src="/public/img/uk-us.png" alt=""></button>
+        <button class="johoButton"> <img class="flag" src="/public/img/japan.png" alt=""></button>
+      </div>
+
+      <div class="basMilieu">
+        <div class="outils">
+          <a href="./outils.html"><button>Outils Utilisés</button></a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ----------------------LATERAL DROIT-------------------------------------- -->
+    <div class="laterale-droite">
+      <div class="hautD"></div>
+      <div class="ecran-droit">
+        <div class="notice" hidden>『　Attention: Initiating communication sequence. CLICK　』</div>
+        <div class="speech" hidden>
+          <div class="mika-speech"></div>
+        </div>
+        <div class="mikazuki" hidden>
+          <img class="mikaOne" hidden src="/public/img/augusWaving.png" alt="">
+          <img class="mikaTwo" hidden src="/public/img/mikazukiPosing.png" alt="">
+        </div>
+      </div>
+      <div class="basD"></div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+
+</body>
+
+
+</html>
