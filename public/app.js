@@ -302,12 +302,14 @@ closingText: function(){
   },
   resizingLoadThree: function() {
       app.screenL.style.height = '43vh';
+      console.log('resizing ouuu?');
   },
     resizingTimeOut:function(){
       //200, 300, 330
-      setTimeout(app.resizingLoadOne,7500);
-      setTimeout(app.resizingLoadTwo,8400);
-      setTimeout(app.resizingLoadThree,9000);
+      //le resize 7500, 8400, 9000
+      setTimeout(app.resizingLoadOne,200);
+      setTimeout(app.resizingLoadTwo,300);
+      setTimeout(app.resizingLoadThree,330);
     },
 };
   document.addEventListener('DOMContentLoaded', app.init);
