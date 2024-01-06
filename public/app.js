@@ -3,6 +3,18 @@ const app={
     //contiendra les nouvelles fonctions de dynamisation de la page web
     
     init :function (){
+      // Détecter le navigateur
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+// Appliquer les styles spécifiques à Chrome
+if (isChrome) {
+    document.body.style.backgroundImage = 'url(img/cockpit.png)';
+    document.body.style.backgroundRepeat = 'no-repeat';
+    document.body.style.backgroundSize = '100% 50%';
+
+    // Autres styles spécifiques à Chrome ici...
+}
+
       ///////////////LA GAUCHE ////////////////////////////
       app.gauche=document.querySelector('.laterale-gauche');
       app.screenL=document.querySelector('.ecran-gauche');

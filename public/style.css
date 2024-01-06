@@ -7,6 +7,7 @@
     --clr-8: #48f779;
     --clr-9:#0C7175;
 }
+
 @font-face {
     font-family:'Roboto';
     src: url('./fonts/roboto/Roboto-Regular.ttf');
@@ -32,13 +33,13 @@ overflow-x: hidden;
 }
 
 /* ---------------------BODY------------------------ */
-/* body{
+ body{
     min-height: 100vh;
     min-width: 100vw ;
     background-image:url(img/cockpit.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-} */
+} 
 /* -----------------------VIDEO PRELOAD---------------------------------------------------------- */
 #preloader{
     z-index: 100;
@@ -449,11 +450,11 @@ https://talks.freelancerepublik.com/responsive-web-design-media-queries-css/ */
     width: 60px;
     height: 60px;
     }
-    .ecran-milieu{
+    /* .ecran-milieu{
         padding-top: 20px;
         display: grid;
     grid-template-columns: 1fr 2fr;
-    }
+    } */
     .ecran-gauche{
         /* transform: matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1);
                 a, b, c, d définissent la rotation et l'échelle.
@@ -470,9 +471,7 @@ https://talks.freelancerepublik.com/responsive-web-design-media-queries-css/ */
             transform: matrix3d(0.95, 0.5, 2, 0, -0.02, 1, 0, 0, 0, 0, 1, 0, -40, 10, 0, 1);
             
         }
-        .rayBarbatos{
-            display: none;
-        }
+        
         .normalBarbatos{
             height: fit-content;
         }
@@ -500,7 +499,7 @@ https://talks.freelancerepublik.com/responsive-web-design-media-queries-css/ */
         opacity: 1;
     }
     }
-/* tablette */
+/* tablette
  @media only screen and (min-width:780px) and (max-width: 990px) and (orientation: landscape){
    
     .rayBarbatos{
@@ -511,7 +510,7 @@ https://talks.freelancerepublik.com/responsive-web-design-media-queries-css/ */
         display: grid;
     grid-template-columns: 1fr 2fr;
     }
- } 
+ }  */
 
 /*desktop 1920-1200px*/
 @media only screen and (min-width:1920px)  and (max-width: 2000px){
@@ -566,24 +565,32 @@ https://talks.freelancerepublik.com/responsive-web-design-media-queries-css/ */
 /* Styles spécifiques à Chrome */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     /* Vos styles spécifiques à Chrome ici */
-    body{
-        background-image:url(img/cockpit.png);
-        background-repeat: no-repeat;
-        background-size: 100% 50%;
-    }
+   .containerVideos{
+    background-size:  100% 50%;
+   }
     
-    .rayBarbatos{
-        background-color:yellowgreen;
-        width: 500px;
-        display:contents;
+     .rayBarbatos #scanBface, .rayBarbatos #scanBdos{
+      
+        width: 150px;
     }
- .normalBarbatos #faceB{
+   
+ .normalBarbatos #faceB, .normalBarbatos #dosB{
     width: 150px;
    }
+      /* transform: matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1);
+    a, b, c, d définissent la rotation et l'échelle.
+    tx et ty définissent les translations sur les axes X et Y. */
+    
     .ecran-gauche{
-        transform: matrix3d(-2,0.5, 1.8, 0, -.01, 1.1, 0, 0, 0, 0, 1, 0, 140, 30, 0, 1);
+        transform: matrix3d(-1.6,0.45, 1.8, 0, -.01, 1.1, 0, 0, 0, 0, 1, 0, 140, 30, 0, 1);
     }
+    .ecran-gauche:hover{
+        transform: matrix3d(-1.9,0.5, 1.5, 0, -.01, 1, 0, 0, 0, 0, 1, 0, 120, 30, 0, 1);
+        }
     .ecran-droit{
-        transform: matrix3d(1, 0.05, 1.8, 0, -.005, 1, 0, 0, 0, 0, 1, 0, -80, 30, 0, 1);
+        transform: matrix3d(0.7, 0.25, 1, 0, -.005, 1, 0, 0, 0, 0, 1, 0, -40, 20, 0, 1);
+    }
+    .ecran-droit:hover{
+        transform: matrix3d(1, 0.35, 1, 0, -.005, 1, 0, 0, 0, 0, 1, 0, -40, 20, 0, 1);
     }
 }
