@@ -64,6 +64,7 @@ if (isChrome) {
       app.skills=document.querySelector('.skills');
       
       
+
       
       
       
@@ -208,6 +209,7 @@ if (isChrome) {
     app.centre.style.display='none';
     app.droite.style.display='none';
    app.containerVideos.removeAttribute('hidden');
+   
 },
 removeHandler: function(){
   console.log('ça marche ?');

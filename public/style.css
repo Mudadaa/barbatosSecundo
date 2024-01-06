@@ -566,9 +566,14 @@ https://talks.freelancerepublik.com/responsive-web-design-media-queries-css/ */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     /* Vos styles spécifiques à Chrome ici */
    .containerVideos{
-    background-size:  100% 50%;
+    background-image: url('img/cockpit.png');
+    background-repeat: no-repeat;
+    background-size:  cover;
+   
    }
-    
+    #perfOne, #perfTwo,#perfThree{
+        margin-top: 130px;
+    }
      .rayBarbatos #scanBface, .rayBarbatos #scanBdos{
       
         width: 150px;
