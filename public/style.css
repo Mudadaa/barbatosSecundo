@@ -484,9 +484,7 @@ https://talks.freelancerepublik.com/responsive-web-design-media-queries-css/ */
         width: fit-content;
         height: fit-content;
       }
-     .buttons{
-        display: block;
-     }
+    
      .intelButton{
         width: 30px;
      }
@@ -597,5 +595,29 @@ https://talks.freelancerepublik.com/responsive-web-design-media-queries-css/ */
     }
     .ecran-droit:hover{
         transform: matrix3d(1, 0.35, 1, 0, -.005, 1, 0, 0, 0, 0, 1, 0, -40, 20, 0, 1);
+    }
+    .buttons{
+        
+        margin-top: 60px;
+        justify-content: space-around;
+        height: 60px;
+        width: 60px;
+    }
+    .basMilieu{
+        padding-bottom: 100px;
+    }
+  
+    .intelButton{
+        width: 100px;
+        padding: 5px;
+    }
+    .johoButton{
+        width: 100px;
+        padding: 5px;
+    }
+    .flag{
+        height:50px;
+        width: 50px;
+        opacity: 1;
     }
 }

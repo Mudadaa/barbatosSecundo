@@ -14,7 +14,7 @@ if (isChrome) {
 
     // Autres styles spécifiques à Chrome ici...
 }
-
+      app.preloader=document.getElementById('preloader');
       ///////////////LA GAUCHE ////////////////////////////
       app.gauche=document.querySelector('.laterale-gauche');
       app.screenL=document.querySelector('.ecran-gauche');
@@ -319,11 +319,12 @@ closingText: function(){
       console.log('resizing ouuu?');
   },
     resizingTimeOut:function(){
+      app.preloader.play();
       //200, 300, 330
       //le resize 7500, 8400, 9000
-      setTimeout(app.resizingLoadOne,200);
-      setTimeout(app.resizingLoadTwo,300);
-      setTimeout(app.resizingLoadThree,330);
+      setTimeout(app.resizingLoadOne,7500);
+      setTimeout(app.resizingLoadTwo,8400);
+      setTimeout(app.resizingLoadThree,9000);
     },
 };
   document.addEventListener('DOMContentLoaded', app.init);
